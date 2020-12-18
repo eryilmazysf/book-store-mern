@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 // const cors = require('cors')
- 
+
 require("dotenv").config();
 
 const connectDB = require("./models/connectDB");
@@ -13,7 +13,7 @@ connectDB();
 app.use(express.json());
 app.use("/api", router);
 
-// production
+// production node env default develop , env =production if app in web browser
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
   app.get("*", (req, res) => {
