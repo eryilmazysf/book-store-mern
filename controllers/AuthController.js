@@ -2,7 +2,7 @@ const User = require("../models/UserModel");
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 var jwt = require("jsonwebtoken");
-const checkFunction = require('../helpers/checkFunction');
+const checkFunction = require("../helpers/checkFunction");
 
 exports.authRegister = async (req, res) => {
   const { firstName, lastName, email, password } = req.body;
@@ -58,4 +58,3 @@ exports.authLogin = async (req, res) => {
     }
   );
 };
-

@@ -3,6 +3,7 @@ const Book = require("../models/BookModel");
 exports.getBookList = async (req, res) => {
   try {
     const bookList = await Book.find();
+
     res.status(200).json({ bookList });
   } catch (err) {
     console.error(err.message);
