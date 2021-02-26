@@ -29,9 +29,17 @@
   background-size: cover;
 }
 .main-button {
-  margin-top: 200px;
-  width: 200px;
-  height: 60px;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 160px;
+  height: 150px;
+  position: absolute;
+  background-image: url("https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHw%3D&auto=format&fit=crop&w=500&q=60");
+}
+.main-avatar {
+  position: relative;
+  vertical-align: middle;
 }
 .ant-image {
   width: 100%;
