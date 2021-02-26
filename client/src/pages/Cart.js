@@ -7,7 +7,7 @@ import {
 import StripeCheckout from "react-stripe-checkout";
 import { toast } from "react-toastify";
 
-export default function Cart({}) {
+export default function Cart() {
   return (
     <div>
       <div class="shopping-cart">
