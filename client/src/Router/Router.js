@@ -27,17 +27,13 @@ function AppRouter() {
           <Route exact path="/signin" component={Signin} />
           <Route exact path="/books" component={BookList} />
           <Route exact path="/forgot-password" component={ForgotPassword} />
-          <Route exact path="/books:id" component={BookDetail} />
+          <Route exact path="/books/:id" component={BookDetail} />
           <Route
             exact
             path="/profile"
             component={currentUser ? Dashboard : Signin}
           />
-          <Route
-            exact
-            path="/cart"
-            component={currentUser ? Cart : Signin}
-          />
+          <Route exact path="/cart" component={currentUser ? Cart : Signin} />
           <Route path="/" component={Main} />
         </Switch>
       </Content>

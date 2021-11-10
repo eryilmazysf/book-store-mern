@@ -51,6 +51,7 @@ const BookList = () => {
           ? filteredBookList.map((book, index) => {
               return (
                 <MediaCard
+                  id={book._id}
                   key={index}
                   title={book?.title}
                   description={book?.author}
