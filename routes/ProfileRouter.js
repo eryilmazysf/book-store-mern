@@ -17,6 +17,6 @@ router.get("/", auth, ProfileController.getProfileInfo);
  * @desc    Update Profile endpoint
  * @access  Private
  */
-router.get("/update", auth, ProfileController.updateProfileInfo);
+router.put("/update/:id", ProfileController.updateProfileInfo);
 
 module.exports = router;
