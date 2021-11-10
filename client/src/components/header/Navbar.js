@@ -49,9 +49,12 @@ const Navbar = () => {
           </Badge>
         </a>
         {isLoggedIn ? (
-          <Menu.Item key="logout" onClick={handleLogout}>
-            Logout
-          </Menu.Item>
+          <>
+            <Menu.Item key="logout" onClick={handleLogout}>
+              Logout
+            </Menu.Item>
+            <Menu.Item key="profile">Profile</Menu.Item>
+          </>
         ) : (
           <>
             <Menu.Item key="signin">Sign In</Menu.Item>

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Main from "../pages/Main";
 import Signup from "../pages/Signup";
 import Signin from "../pages/Signin";
+import Profile from "../pages/Profile";
 import ForgotPassword from "../pages/ForgotPassword";
 import BookDetail from "../pages/BookDetail";
 import BookList from "../pages/BookList";
@@ -16,7 +17,7 @@ import Cart from "../pages/Cart";
 const { Content } = Layout;
 
 function AppRouter() {
-  // const { currentUser } = useContext(FirebaseAuthContext);
+  //const { currentUser } = useContext(FirebaseAuthContext);
   const currentUser = "sdf";
   return (
     <Router>
@@ -31,7 +32,7 @@ function AppRouter() {
           <Route
             exact
             path="/profile"
-            component={currentUser ? Dashboard : Signin}
+            component={currentUser ? Profile : Signin}
           />
           <Route exact path="/cart" component={currentUser ? Cart : Signin} />
           <Route path="/" component={Main} />

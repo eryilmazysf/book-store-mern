@@ -15,7 +15,7 @@ exports.updateProfileInfo = async (req, res) => {
   //TODO: update profile fn.
   try {
     const editInfo = req.body;
-    const user = await User.findByIdAndUpdate(req.params.id, editInfo, {
+    const user = await User.findByIdAndUpdate(req.decodedUser._id, editInfo, {
       new: true,
       runValidators: true,
     });
