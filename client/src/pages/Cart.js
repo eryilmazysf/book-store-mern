@@ -37,7 +37,7 @@ export default function Cart() {
           <div class="total-price">$549</div>
         </div>
         <StripeCheckout
-          stripeKey="pk_test_4TbuO6qAW2XPuce1Q6ywrGP200NrDZ2233"
+          stripeKey="pk_test_51HxxP0IPQhcZcTybQnQDtfHT3tBgXLReiF2eGAd2BHutX3cXygKjznqAjDBKNJZO5UhgcwbsbrZ9Qlhl8cxV3VUQ00gITPa59Q"
           token={() => toast("OK")}
           name="Pay with Stripe"
           //  billingAddress

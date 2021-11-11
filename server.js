@@ -15,7 +15,7 @@ app.use("/api", router);
 
 // production node env default develop , env =production if app in web browser
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+  app.use(express.static("client/build")); // client git build icindekileri calistir ,build heroku icin
   app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });

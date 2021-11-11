@@ -1,4 +1,5 @@
 @import "~antd/dist/antd.css";
+/* ~ means nodemodules ici */
 @import "~react-toastify/dist/ReactToastify.css";
 
 .ant-layout {

@@ -1,6 +1,4 @@
-import { useContext } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
 import Main from "../pages/Main";
 import Signup from "../pages/Signup";
 import Signin from "../pages/Signin";
@@ -11,13 +9,16 @@ import BookList from "../pages/BookList";
 import Navbar from "../components/header/Navbar";
 import Footer from "../components/Footer/Footer";
 import { Layout } from "antd";
-import Dashboard from "../pages/Dashboard";
 import Cart from "../pages/Cart";
+import { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
 
 const { Content } = Layout;
 
 function AppRouter() {
   //const { currentUser } = useContext(FirebaseAuthContext);
+  const { isLoggedIn } = useContext(AuthContext);
+  console.log(isLoggedIn);
   const currentUser = "sdf";
   return (
     <Router>
